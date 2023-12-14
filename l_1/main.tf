@@ -54,27 +54,27 @@ resource "aws_instance" "test" {
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   # key_name               = "put your key name here"
   tags = {
-    Name = "Test_from_VS_Code"
+    Name = "Test insta_Lesson_1_TF"
   }
 }
 
-# output "web-address_test_instance_public_dns" {
-#   value = aws_instance.test.public_dns
-# }
-# output "web-address_test_instance_public_ip" {
-#   value = aws_instance.test.public_ip
-# }
+output "web-address_test_instance_public_dns" {
+  value = aws_instance.test.public_dns
+}
+output "web-address_test_instance_public_ip" {
+  value = aws_instance.test.public_ip
+}
 
-# data "aws_caller_identity" "current" {}
+data "aws_caller_identity" "current" {}
 
-# output "account_id" {
-#   value = data.aws_caller_identity.current.account_id
-# }
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
 
-# output "caller_arn" {
-#   value = data.aws_caller_identity.current.arn
-# }
+output "caller_arn" {
+  value = data.aws_caller_identity.current.arn
+}
 
-# output "caller_user" {
-#   value = data.aws_caller_identity.current.user_id
-# }
+output "caller_user" {
+  value = data.aws_caller_identity.current.user_id
+}
